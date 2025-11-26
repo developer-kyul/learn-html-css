@@ -22,6 +22,7 @@
   <body>
     <a href="/index.html">Index로 이동</a>
     <hr />
+    <!-- 참고 사이트 : https://www.w3.org/WAI/tutorials/tables/ -->
     <!-- 실습 -->
     <table class="lecture-table">
       <caption class="sr-only">
@@ -106,6 +107,34 @@
           <td colspan="3">10000</td>
         </tr>
       </tfoot>
+    </table>
+    <hr />
+    <!-- 멀티테이블 -->
+    <table>
+      <tr>
+        <th scope="col" id="name">이름</th>
+        <th scope="col" id="markup">HTML</th>
+        <th scope="col" id="style">CSS</th>
+        <th scope="col" id="script">Javascript</th>
+      </tr>
+      <tr>
+        <th scope="row" id="name-jo">조재권</th>
+        <td headers="name-jo markup">100</td>
+        <td headers="name-jo style">90</td>
+        <td headers="name-jo script">95</td>
+      </tr>
+      <tr>
+        <th scope="row" id="name-sa">사민재</th>
+        <td headers="name-sa markup">50</td>
+        <td headers="name-sa style">90</td>
+        <td headers="name-sa script">100</td>
+      </tr>
+      <tr>
+        <th scope="row" id="name-kim">김효경</th>
+        <td headers="name-kim markup">20</td>
+        <td headers="name-kim style">100</td>
+        <td headers="name-kim script">100</td>
+      </tr>
     </table>
   </body>
 </html>
