@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 관련 요소 | Likelion Bootcamp</title>
+    <style>
+      .html-css {
+        width: 100px;
+        background-color: lightgreen;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid currentColor;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/index.html">Index로 이동</a>
+    <hr />
+    <!-- 실습 -->
+    <table class="lecture-table">
+      <caption class="sr-only">
+        입문자를 위한 Git과 HTML &amp; CSS 과정
+        <span>학습시간, 난이도, 교육비 지원, 평가항목, 수료기준, 정원, 교재 정보 등을 나타낸 표</span>
+      </caption>
+      <colgroup>
+        <col span="2" />
+        <col span="2" />
+      </colgroup>
+      <tr>
+        <th scope="row" id="study-time">학습시간</th>
+        <td headers="study-time">09:00 ~ 17:00 ( 28시간 )</td>
+        <th scope="row" id="difficulty">난이도</th>
+        <td headers="difficulty">초급</td>
+      </tr>
+      <tr>
+        <th id="educational-expenses">교육비 지원</th>
+        <td headers="educational-expenses">고용보험 비환급</td>
+        <th id="evaluation-items">평가항목</th>
+        <td headers="evaluation-items">출석률 100%</td>
+      </tr>
+      <tr>
+        <th id="completion-criteria">수료기준</th>
+        <td headers="completion-criteria">총점 80점 이상시 수료</td>
+        <th id="class-capacity">정원</th>
+        <td headers="class-capacity">24명</td>
+      </tr>
+      <tr>
+        <th id="learning-textbook">교재정보</th>
+        <td colspan="3" headers="learning-textbook">
+          입문자를 위한 Git과 HTML&CSS<br />
+          HTML & CSS 웹사이트 개발과 디자인 기초 (35,000원)
+        </td>
+      </tr>
+    </table>
+    <hr />
+    <!-- 강의내용 -->
+    <table>
+      <caption class="sr-only">
+        프론트엔드 시험 결과
+      </caption>
+      <colgroup>
+        <col class="name" />
+        <col span="2" class="html-css" />
+        <col class="JavaScript" />
+      </colgroup>
+      <!-- 제목행 -->
+      <thead>
+        <tr>
+          <th scope="col">이름</th>
+          <th scope="col">HTML</th>
+          <th scope="col">CSS</th>
+          <th scope="col">JavaScript</th>
+        </tr>
+      </thead>
+      <!-- 데이터행 -->
+      <tbody>
+        <tr>
+          <td>박연하</td>
+          <td>100</td>
+          <td>90</td>
+          <td>95</td>
+        </tr>
+        <tr>
+          <td>백희연</td>
+          <td>70</td>
+          <td>70</td>
+          <td>70</td>
+        </tr>
+        <tr>
+          <td>김사자</td>
+          <td>70</td>
+          <td>70</td>
+          <td>70</td>
+        </tr>
+      </tbody>
+      <!-- 테이블 footer -->
+      <tfoot>
+        <tr>
+          <th>합계</th>
+          <td colspan="3">10000</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
