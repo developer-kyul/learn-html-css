@@ -30,5 +30,89 @@
         </div>
       </fieldset>
     </form>
+    <hr />
+
+    <form action="https://formspree.io/f/xeqwwbwk" method="post" id="inputForm">
+      <!-- 텍스트 입력 서식 -->
+      <!-- lable+input#id값 -->
+      <div>
+        <label for="userID">이름</label>
+        <input type="text" id="userID" required placeholder="예)홍길동" name="name" />
+
+        <!-- 비밀번호 입력 서식 -->
+        <div>
+          <label for="userPwd">비밀번호</label>
+          <input type="password" pattern="^(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$" id="userPwd" required placeholder="최소 8자리 이상" name="pwd" />
+        </div>
+
+        <!-- 이메일 입력 서식 -->
+        <div>
+          <label for="userEmail">이메일</label>
+          <input type="email" id="userEmail" required placeholder="예)guest@example.com" name="email" />
+        </div>
+
+        <!-- 전화번호 입력 서식 -->
+        <div>
+          <label for="userPhone">전화번호</label>
+          <input type="tel" pattern="[0-9]{10}" id="userPhone" placeholder="예)010-1234-5678" name="phone" />
+        </div>
+
+        <!-- URL 입력 서식 -->
+        <div>
+          <label for="userSns">SNS</label>
+          <input type="url" id="userSns" placeholder="예)https://likelion.com" name="sns" />
+        </div>
+
+        <!-- 검색어 입력 서식 -->
+        <div>
+          <label for="search">검색어</label>
+          <input type="search" id="search" placeholder="예)likelion" name="search" />
+        </div>
+
+        <!-- 라디오 입력 서식 -->
+        <div>
+          <input type="radio" id="male" name="gender" value="man" />
+          <label for="male">남자</label>
+          <input type="radio" id="female" name="gender" value="woman" checked />
+          <label for="female">여자</label>
+        </div>
+
+        <!-- 체크박스 입력 서식 -->
+        <!-- name: DB 의 이름, value: DB 의 값 -->
+        <div>
+          <input type="checkbox" id="html" name="frontend" value="html" />
+          <label for="html">HTML</label>
+          <input type="checkbox" id="css" name="frontend" value="css" />
+          <label for="css">CSS</label>
+          <input type="checkbox" id="js" name="frontend" value="js" checked />
+          <label for="js">JS</label>
+        </div>
+
+        <!-- 파일 첨부 서식 -->
+        <div>
+          <input type="file" />
+        </div>
+
+        <!-- input + list -->
+        <input list="fruitslist" name="fruits" id="fruits" />
+        <datalist id="fruitslist">
+          <option value="apple" label="사과"></option>
+          <option value="banana" label="바나나"></option>
+          <option value="grape" label="포도"></option>
+          <option value="orange" label="오렌지"></option>
+        </datalist>
+
+        <!-- 전송버튼 -->
+        <input type="submit" value="전송" />
+        <!-- <button type="submit">제출</button> -->
+
+        <!-- 일반 버튼 -->
+        <input type="button" value="click" />
+      </div>
+    </form>
+
+    <!-- 초기화 버튼 -->
+    <!-- form 안에 있어야함 하지만, form 태그에 아이디를 넣어주면 가능함 -->
+    <input type="reset" value="초기화" form="inputForm" />
   </body>
 </html>
