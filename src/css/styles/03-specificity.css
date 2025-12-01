@@ -1,0 +1,27 @@
+/* 상속, 겹침, 우선 순위 */
+body {
+  color: green;
+}
+
+.wrapper {
+  color: blue;
+}
+
+#coding {
+  color: blue;
+}
+
+.a.b.c.d.e.f.g.h.i.j.k.l {
+  color: green;
+}
+
+body .wrapper p.note {
+  color: red;
+}
+body p.note.like {
+  color: purple;
+}
+
+.wrapper p {
+  color: skyblue !important;
+}
