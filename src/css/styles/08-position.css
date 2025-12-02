@@ -43,3 +43,12 @@
   bottom: 0;
   right: 0;
 }
+
+/* 가운데 맞추기 */
+/* 2024년 6월부터 align-content: center; 블록요소에 사용가능 */
+.test {
+  background-color: pink;
+  text-align: center;
+  align-content: center;
+  height: 300px;
+}
