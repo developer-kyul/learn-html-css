@@ -1,11 +1,17 @@
 /* 논리속성과 논리값 */
-/* width , height */
+/* width->inline-size , height->block-size */
+/* 논리속성으로 사용하는 이유는 다국어 및 다양하게 쓰기 모드를 지원하는 웹사이트에서 유연하게 사용하기 위함  */
+/* inline-size는 텍스트가 흐르는 방향의 크기를 정의하는 거라서 한글과 영어는 좌우로, 수직으로 작성하는 일본어나 아랍어는 수직으로 지원 */
+
 .like {
   background: #ffc;
   inline-size: 200px;
   block-size: 100px;
 }
 /* margin, padding */
+/* padding-block: 20px; /블록은 탑,바텁을 합친 값/
+margin-inline: 20px; /인라인은 좌우를 합친 값/ */
+
 .lion {
   background: #ffc;
   padding-block: 20px;
@@ -22,10 +28,10 @@
   strong {
     position: absolute;
     background: #fcf;
-    /* inset-inline-start: 0;
-    inset-inline-end: 0;
-    inset-block-start: 0;
-    inset-block-end: 0; */
+    /* inset-inline-start: 0; - left의 논리속성/
+    inset-inline-end: 0; - float-right의 논리속성/
+    inset-block-start: 0; - top의 논리속성/
+    inset-block-end: 0;  - bottom의 논리속성, 크기를 따로 안주면 부모요소크기까지 커짐 */
     inset: 0;
   }
 }
