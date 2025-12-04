@@ -15,8 +15,38 @@
   <body class="css">
     <a href="/index.html">Index로 이동</a>
     <h1>아바타 UI</h1>
+    <h2>아바타 레이아웃</h2>
+    <ul class="avatar-list">
+      <li class="avatar-item"></li>
+      <li class="avatar-item"></li>
+      <li class="avatar-item"></li>
+      <li class="avatar-item"></li>
+      <li class="avatar-item"></li>
+      <li class="avatar-item"></li>
+      <li class="avatar-item"></li>
+      <li class="avatar-item"></li>
+    </ul>
+
     <hr />
-    <h2>온라인 상태</h2>
+    <h2>아바타 컴포넌트</h2>
+    <h3>온라인 상태 - 버튼</h3>
+    <div class="ui-component">
+      <button type="button" class="avatar" aria-label="온라인">
+        <img src="/src/assets/face/face1.webp" width="64" height="64" alt="아바타 이름" />
+        <span class="avatar-state is-online"></span>
+      </button>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <h3>오프라인 상태 - 버튼</h3>
+    <div class="ui-component">
+      <button type="button" class="avatar">
+        <img src="/src/assets/face/face1.webp" width="64" height="64" alt="아바타 이름" />
+        <span class="avatar-state"><span class="sr-only">오프라인</span></span>
+      </button>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <hr />
+    <h3>온라인 상태</h3>
     <div class="ui-component">
       <div class="avatar">
         <img src="/src/assets/face/face1.webp" width="64" height="64" alt="아바타 이름" />
@@ -24,12 +54,12 @@
       </div>
       <button type="button" class="copy-component">복사</button>
     </div>
-    <h2>오프라인 상태</h2>
+    <h3>오프라인 상태</h3>
     <div class="ui-component">
-      <div class="avatar">
+      <figure class="avatar">
         <img src="/src/assets/face/face1.webp" width="64" height="64" alt="아바타 이름" />
-        <span class="avatar-state"><span class="sr-only">오프라인</span></span>
-      </div>
+        <figcaption class="avatar-state"><span class="sr-only">오프라인</span></figcaption>
+      </figure>
       <button type="button" class="copy-component">복사</button>
     </div>
   </body>
