@@ -1,0 +1,15 @@
+/* 웹 관련 용어 */
+/* 컴포넌트 */
+/* root는 font 16px, font-weight 700 */
+.term {
+  background: #ffc;
+  font-size: 0.875rem;
+  line-height: 1.5;
+
+  strong {
+    display: block;
+    color: #296897;
+    font-weight: 700;
+  }
+}
+/* 레이아웃 */
