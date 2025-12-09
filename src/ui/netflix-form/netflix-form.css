@@ -40,6 +40,7 @@
   --gray-900: #171717;
 }
 
+/* 넷플릭스 폼 서식 */
 /* 콤보 박스 */
 .combo-box {
   --text-color: var(--gray-500);
@@ -153,7 +154,6 @@
 
 /* 입력 서식 */
 .input-wrapper {
-  background: pink;
   position: relative;
 
   &:has(input:focus) label {
@@ -161,12 +161,7 @@
     translate: 16px -130%;
   }
 
-  /* &:focus-within label {
-    font-size: 10px;
-  } */
-
   label {
-    /* background: lime; */
     position: absolute;
     top: 50%;
     left: 0;
@@ -174,7 +169,6 @@
   }
 
   input {
-    /* background: yellow; */
     border: 1px solid var(--gray-500);
     padding: 8px 16px;
     width: 100%;
@@ -186,5 +180,32 @@
     &:focus-visible {
       box-shadow: 0 0 2px 1px var(--red-500);
     }
+  }
+}
+
+.like {
+  border: 1px solid red;
+  display: flow-root;
+  padding: 10px 100px;
+  display: flex;
+  flex-flow: nowrap row;
+
+  .lion {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: -50px;
+
+    &:hover {
+      z-index: 1;
+    }
+  }
+
+  .lion:first-child {
+    background: yellow;
+  }
+
+  .lion:last-child {
+    background: pink;
   }
 }
