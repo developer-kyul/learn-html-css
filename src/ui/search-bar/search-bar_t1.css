@@ -1,0 +1,142 @@
+/* 쌤 코드 */
+/* 검색어 입력서식 - flex */
+.searchbar {
+  --green-100: #03cc5c;
+  --green-200: #1bf008;
+  --green-300: #03cca8;
+
+  --gray-100: #bcc3c7;
+  --gray-200: #9b9a90;
+  --gray-300: #6d7478;
+
+  display: flex;
+  flex-flow: nowrap row;
+  column-gap: 12px;
+  padding: 12px 12px 12px 20px;
+  border: 1px solid var(--green-100);
+  border-radius: 24px;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  .searchbar-form {
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: start;
+    align-items: start;
+    column-gap: 12px;
+    flex-grow: 1;
+  }
+
+  .input-wrapper {
+    /* box-shadow: 0 0 0 1px blue; */
+    flex-grow: 1;
+
+    input {
+      width: 100%;
+      height: 24px;
+    }
+  }
+
+  .circle-gradient {
+    --size: 24px;
+    --start-color: var(--green-200, #1bf008);
+    --end-color: var(--green-300, #03cca8);
+
+    background: linear-gradient(135deg, var(--start-color), var(--end-color));
+    border: 0;
+    padding: 0;
+    width: var(--size);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+
+    &::before {
+      --inner-size: calc(var(--size) / 3);
+
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      /* transform: translate(-50%, -50%) rotate(); */
+      translate: -50% -50%;
+      width: var(--inner-size);
+      aspect-ratio: 1/1;
+      background: #fff;
+      border-radius: inherit;
+    }
+  }
+}
+
+/* 검색어 입력서식 - container */
+.searchbar {
+  --green-100: #03cc5c;
+  --green-200: #1bf008;
+  --green-300: #03cca8;
+  --gray-100: #bcc3c7;
+  --gray-200: #9b9a90;
+  --gray-300: #6d7478;
+
+  --border-color: var(--green-100);
+
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: start;
+  align-items: center;
+  column-gap: 12px;
+  padding: 12px 12px 12px 20px;
+  border-radius: 48px;
+
+  .searchbar-form,
+  .input-wrapper {
+    display: contents;
+  }
+
+  svg {
+    display: block;
+  }
+
+  .logo,
+  .circle-gradient {
+    flex: 0 0 auto;
+  }
+
+  input {
+    flex: 1 1 0;
+    margin-right: 4px;
+    height: 24px;
+    border: 0;
+  }
+
+  .circle-gradient {
+    --size: 24px;
+    --start-color: var(--green-200, #1bf008);
+    --end-color: var(--green-300, #03cca8);
+
+    background: linear-gradient(135deg, var(--start-color), var(--end-color));
+    border: 0;
+    padding: 0;
+    width: var(--size);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: relative;
+
+    &::before {
+      --inner-size: calc(var(--size) / 3);
+
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      /* transform: translate(-50%, -50%) rotate(); */
+      translate: -50% -50%;
+      width: var(--inner-size);
+      aspect-ratio: 1/1;
+      background: #fff;
+      border-radius: inherit;
+    }
+  }
+}
