@@ -1,0 +1,162 @@
+/* 키프레임 애니메이션 */
+/* 공통 스타일 (.container 및 .case) */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: 300px;
+  gap: 20px;
+
+  hr {
+    display: none;
+  }
+}
+
+/* 모든 .target-animation에 animation-play-state: paused;를 기본으로 설정 */
+.case {
+  border: 1px solid currentColor;
+  padding: 2.5rem;
+
+  strong {
+    color: #37b24d;
+    display: block;
+    font-size: 20px;
+    margin-block-end: 10px;
+  }
+
+  button {
+    border-radius: 0.5rem;
+    padding: 0.5em 1em;
+    color: #fff;
+  }
+
+  .toggle-animation {
+    background-color: #4263eb;
+  }
+
+  .toggle-animation.paused {
+    background-color: #e03131;
+  }
+
+  .reset-animation {
+    background-color: #15aabf;
+  }
+
+  .target-animation {
+    margin-top: 2.5rem;
+    margin-block-start: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
+    align-content: center;
+    padding: 0.625rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, #37b24d, #2b8a3e);
+  }
+}
+
+/* fade 애니메이션 */
+.fade {
+  .target-animation {
+    /* animation-name: fade;
+    animation-duration: 2000ms;
+    animation-delay: 300ms;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; */
+    animation: fade 2000ms 300ms alternate infinite ease-in-out forwards;
+    animation-play-state: paused;
+  }
+}
+
+/* shrink 애니메이션 */
+.shrink {
+  .target-animation {
+    animation: shrink 2s infinite alternate ease-in-out both;
+    animation-play-state: paused;
+    transform-origin: 0 0;
+  }
+}
+
+/* bounce 애니메이션 */
+.bounce {
+  .target-animation {
+    animation: bounce 0.2s infinite alternate ease-in-out both;
+    animation-play-state: paused;
+    transform-origin: 0 0;
+  }
+}
+
+/* shake 애니메이션 */
+.shake {
+  .target-animation {
+    animation: shake 0.2s infinite alternate ease-in-out both;
+    animation-play-state: paused;
+    transform-origin: 0 0;
+  }
+}
+
+/* flip 애니메이션 */
+.flip {
+  perspective: 500px;
+
+  .target-animation {
+    animation: flip 2s infinite alternate ease-in-out both;
+    animation-play-state: paused;
+  }
+}
+
+/* pulse 애니메이션 */
+.pulse {
+  .target-animation {
+    animation: pulse 2s infinite alternate ease-in-out both;
+    animation-play-state: paused;
+  }
+}
+
+/* wobble 애니메이션 */
+.wobble {
+  .target-animation {
+    animation: wobble 0.6s infinite alternate ease-in-out both;
+    animation-play-state: paused;
+  }
+}
+
+/* spin 애니메이션 */
+.spin {
+  .target-animation {
+    width: 120px;
+    aspect-ratio: 1;
+    background: conic-gradient(red 0% 25%, green 25% 50%, blue 50% 75%, purple 75% 100%);
+    border-radius: 50%;
+    animation: spin 0.2s infinite linear;
+    animation-play-state: paused;
+    color: #fff;
+  }
+}
+
+/* border rotate 애니메이션 */
+.rotate {
+  .target-animation {
+    --angle: 0deg;
+
+    width: 120px;
+    height: 120px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      background: conic-gradient(from var(--angle), red 0 30%, transparent 30% 100%);
+      width: 110%;
+      height: 110%;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      z-index: -1;
+      border-radius: inherit;
+      animation: angle 2s infinite linear;
+      animation-play-state: paused;
+    }
+  }
+}
