@@ -1,4 +1,5 @@
 /* 웹카페 메뉴 */
+/* 컴포넌트 */
 .menu-item {
   .menu-button {
     border-radius: 4px;
@@ -10,20 +11,18 @@
     text-shadow:
       1px 1px 0 #000,
       -1px -1px 0 #000;
-    anchor-name: --menu-button;
+    /* anchor-name: --menu-button; */
   }
 
   .sub-menu {
-    position: absolute;
-    position-anchor: menu-button;
-    inset: unset;
-    left: anchor(left);
-    top: calc(anchor(bottom) + 4px);
-
-    /* 주석처리한 내용으로도 위치값 잡기가 가능함 참고하기 */
     /* position-area: right; */
-    /* inset-inline-start: anchor(left);
-    inset-block-start: anchor(bottom); */
+    /* position: absolute; */
+    /* position-anchor: --menu-button; */
+    /* left: anchor(left);
+    top: calc(anchor(bottom) + 4px); */
+    inset: unset;
+    inset-inline-start: anchor(left);
+    inset-block-start: calc(anchor(bottom) + 4px);
 
     &:popover-open {
       display: flex;
@@ -35,7 +34,36 @@
       a {
         display: block;
         padding: 4px;
+
+        &:hover,
+        &:focus {
+          font-weight: 700;
+          color: #e85e2c;
+          text-decoration: underline;
+          text-underline-offset: 8px;
+          outline: 0;
+        }
       }
+    }
+  }
+}
+
+/* 레이아웃 */
+.navigation {
+  padding-bottom: 45px;
+  width: max-content;
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    column-gap: 16px;
+
+    .menu-accessibility,
+    .menu-qna,
+    .menu-archive {
+      inset: unset;
+      inset-inline-end: anchor(right);
+      inset-block-start: calc(anchor(bottom) + 4px);
     }
   }
 }
