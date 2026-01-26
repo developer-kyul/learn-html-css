@@ -1,0 +1,29 @@
+@layer like, lion;
+
+@layer lion {
+  .bootcamp {
+    background: pink;
+  }
+}
+
+@layer like {
+  .bootcamp {
+    background: yellow;
+    padding: 10px;
+
+    h2 {
+      font-size: 1.125rem;
+    }
+
+    p {
+      padding-block: 10px;
+    }
+
+    a {
+      display: block;
+      background: var(--dark-blue);
+      border-radius: 20px;
+      padding: 10px;
+    }
+  }
+}
